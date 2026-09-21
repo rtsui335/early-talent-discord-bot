@@ -46,7 +46,7 @@ POSSIBLE_EARLY_TALENT = [
 
 
 ROLE_CATEGORIES = {
-    "💻 Software Engineering": [
+    "Software Engineering": [
         "software engineer",
         "software engineering",
         "software developer",
@@ -59,7 +59,7 @@ ROLE_CATEGORIES = {
         "mobile engineer",
     ],
 
-    "🤖 AI / Machine Learning": [
+    "AI / Machine Learning": [
         "machine learning",
         "ml engineer",
         "artificial intelligence",
@@ -68,14 +68,14 @@ ROLE_CATEGORIES = {
         "deep learning",
     ],
 
-    "📊 Data": [
+    "Data": [
         "data engineer",
         "data scientist",
         "data science",
         "analytics engineer",
     ],
 
-    "🔐 Cybersecurity": [
+    "Cybersecurity": [
         "security engineer",
         "cybersecurity",
         "cyber security",
@@ -83,7 +83,7 @@ ROLE_CATEGORIES = {
         "security analyst",
     ],
 
-    "☁️ Cloud / Infrastructure": [
+    "Cloud / Infrastructure": [
         "cloud engineer",
         "platform engineer",
         "devops",
@@ -91,7 +91,7 @@ ROLE_CATEGORIES = {
         "infrastructure engineer",
     ],
 
-    "⚙️ Systems / Firmware": [
+    "Systems / Firmware": [
         "firmware",
         "embedded",
         "systems software",
@@ -99,7 +99,7 @@ ROLE_CATEGORIES = {
         "operating systems",
     ],
 
-    "📈 Quant / Trading": [
+    "Quant / Trading": [
         "quantitative",
         "quant developer",
         "quant trader",
@@ -161,7 +161,7 @@ def get_category(job):
         if any(keyword in role for keyword in keywords):
             return category
 
-    return "🌱 General Early Talent"
+    return "General Early Talent"
 
 
 def classify_early_talent(job):
@@ -207,9 +207,9 @@ def send_discord(job, confidence, matched_keyword):
     category = get_category(job)
 
     if confidence == "strong":
-        confidence_text = "🎓 Freshman / Sophomore Targeted"
+        confidence_text = "Freshman / Sophomore Targeted"
     else:
-        confidence_text = "🌱 Possible Early Talent"
+        confidence_text = "Possible Early Talent"
 
     payload = {
         "embeds": [
